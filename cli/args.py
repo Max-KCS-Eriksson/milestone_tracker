@@ -16,5 +16,10 @@ parser.add_argument(
     const=True,
     help=("list milestone entries"),
 )
+parser.add_argument(
+    "-t",
+    "--time_since",
+    help=("show time passed since milestone"),
+)
 
 args = parser.parse_args()

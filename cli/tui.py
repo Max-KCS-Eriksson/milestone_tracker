@@ -1,5 +1,7 @@
 import datetime
 
+from milestones.milestone import Milestone
+
 
 def input_int(prompt):
     value = input(prompt)
@@ -23,3 +25,7 @@ def input_milestone_details():
 def list_milestones(milestones: dict):
     for milestone, date in milestones.items():
         print(f"{milestone}: {datetime.date(*date.values())}")
+
+
+def print_time_passed_since(milestone: Milestone):
+    print(f"{milestone.days_since()} days since {milestone.event}")
