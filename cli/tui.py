@@ -1,3 +1,6 @@
+import datetime
+
+
 def input_int(prompt):
     value = input(prompt)
     try:
@@ -15,3 +18,8 @@ def input_milestone_details():
         "month": input_int("month: "),
         "date": input_int("date: "),
     }
+
+
+def list_milestones(milestones: dict):
+    for milestone, date in milestones.items():
+        print(f"{milestone}: {datetime.date(*date.values())}")

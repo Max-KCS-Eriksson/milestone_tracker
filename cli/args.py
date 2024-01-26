@@ -9,5 +9,12 @@ parser.add_argument(
     const=True,
     help=("add new milestone entry"),
 )
+parser.add_argument(
+    "-l",
+    "--list_milestones",
+    nargs="?",
+    const=True,
+    help=("list milestone entries"),
+)
 
 args = parser.parse_args()
