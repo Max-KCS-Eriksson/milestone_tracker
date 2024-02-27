@@ -6,10 +6,11 @@ from milestones.milestone import Milestone
 def input_int(prompt):
     value = input(prompt)
     try:
-        return int(value)
+        value = int(value)
     except ValueError:
         print("Input error: enter integer")
-        input_int(prompt)
+        value = input_int(prompt)
+    return value
 
 
 def input_milestone_details():
