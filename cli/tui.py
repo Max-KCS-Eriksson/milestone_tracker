@@ -23,8 +23,12 @@ def input_milestone_details():
 
 
 def list_milestones(milestones: dict):
+    unsorted_list = []
     for milestone, date in milestones.items():
-        print(f"{milestone}: {datetime.date(*date.values())}")
+        unsorted_list.append(f"{datetime.date(*date.values())} {milestone}")
+
+    for milestone in sorted(unsorted_list):
+        print(milestone)
 
 
 def print_time_passed_since(milestone: Milestone):
