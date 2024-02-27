@@ -16,10 +16,8 @@ if args.list_milestones:
     list_milestones(STORAGE.milestones)
 
 if args.time_since:
-    targes_milestone_event = args.time_since
-
-    # Assemble `Milestone` from given arg and info from `STORAGE.milestones`
+    target_milestone_event = args.time_since
 
     print_time_passed_since(
-        Milestone(targes_milestone_event, **STORAGE.milestones[targes_milestone_event])
+        Milestone(target_milestone_event, **STORAGE.milestones[target_milestone_event])
     )
