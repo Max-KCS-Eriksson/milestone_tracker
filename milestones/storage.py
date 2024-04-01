@@ -24,6 +24,9 @@ class Storage:
         return milestones
 
     def add_milestone(self, milestone: Milestone):
+        if self.has_milestone(milestone.event):
+            return False
+
         self.milestones[milestone.event] = {
             "year": milestone.year,
             "month": milestone.month,
@@ -31,7 +34,11 @@ class Storage:
         }
 
         self._store_milestones()
+        return True
 
     def _store_milestones(self):
         with open(self.storage, "w") as json_file:
             json.dump(self.milestones, json_file)
+
+    def has_milestone(self, event):
+        return event in self.milestones
