@@ -17,9 +17,12 @@ elif args.list_milestones:
 
 elif args.time_since:
     event = args.time_since
-    date_details = STORAGE.milestones[event]
-
-    tui.print_time_passed_since(Milestone(event, **date_details))
+    try:
+        date_details = STORAGE.milestones[event]
+    except KeyError:
+        tui.event_not_found(event)
+    else:
+        tui.print_time_passed_since(Milestone(event, **date_details))
 
 else:
     parser.print_help()

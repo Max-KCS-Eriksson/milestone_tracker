@@ -34,3 +34,7 @@ def list_milestones(milestones: dict):
 
 def print_time_passed_since(milestone: Milestone):
     print(f"{milestone.days_since()} days since {milestone.event}")
+
+
+def event_not_found(event):
+    print(f'Event not found: "{event}"')
