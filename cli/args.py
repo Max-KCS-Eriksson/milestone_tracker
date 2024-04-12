@@ -19,7 +19,12 @@ parser.add_argument(
 parser.add_argument(
     "-t",
     "--time_since",
-    help=("show time passed since milestone"),
+    help=("show days passed since milestone"),
+)
+parser.add_argument(
+    "-m",
+    "--months_since",
+    help=("show months passed since milestone"),
 )
 
 args = parser.parse_args()

@@ -32,8 +32,12 @@ def list_milestones(milestones: dict):
         print(milestone)
 
 
-def print_time_passed_since(milestone: Milestone):
+def days_passed_since(milestone: Milestone):
     print(f"{milestone.days_since()} days since {milestone.event}")
+
+
+def months_passed_since(milestone: Milestone):
+    print(f"{milestone.months_since()} months since {milestone.event}")
 
 
 def event_not_found(event):

@@ -30,7 +30,7 @@ class Storage:
         self.milestones[milestone.event] = {
             "year": milestone.year,
             "month": milestone.month,
-            "date": milestone.date,
+            "day": milestone.day,
         }
 
         self._store_milestones()
