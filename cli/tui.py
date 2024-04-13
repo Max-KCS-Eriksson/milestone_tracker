@@ -19,7 +19,7 @@ def input_milestone_details():
         "event": input("event: "),
         "year": input_int("year: "),
         "month": input_int("month: "),
-        "date": input_int("date: "),
+        "day": input_int("day: "),
     }
 
 
